@@ -90,9 +90,9 @@ export default function Home(props: any) {
       <main className={styles.main}>
         <div>
           <h1>Select and get info about country</h1>
-          <select value={country.code} onChange={SelectCountry}>
+          <select value={country.code} onChange={SelectCountry} data-testid = "country-select">
             {countryData.map((country: {name: string, code: string}) => (
-              <option key={country.code} value={country.code} id={country.code}>
+              <option key={country.code} value={country.code} id={country.code} data-testid = {country.code}>
                 {country.name}
               </option>
             ))}
